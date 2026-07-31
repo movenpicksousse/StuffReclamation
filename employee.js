@@ -178,4 +178,4 @@ afficherReclamations();
 // Rafraîchit la page automatiquement après 5 secondes (5000 ms)
 setTimeout(function() {
     location.reload();
-}, 5000);
+}, 150000);
