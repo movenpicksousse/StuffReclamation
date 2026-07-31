@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Partage de réclamations</title>
+    <link rel="stylesheet" href="employee.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Partage de réclamations</h1>
+
+    <p>Tableau des détails</p>
+
+<p>Cette page permet aux employés de consulter les réclamations des clients</p>
+
+<hr>
+
+<div class="tabs">
+
+    <button id="btnRestantes" onclick="afficherRestantes()">
+        Tâches restantes
+    </button>
+
+    <button id="btnFinies" onclick="afficherFinies()">
+        Tâches finies
+    </button>
+
+</div>
+
+    <table border="1">
+
+        <thead>
+            <tr>
+                <th>Num de chambre</th>
+                <th>le nom du client </th>
+                <th>Service</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Statut</th>
+            </tr>
+        </thead>
+
+    <tbody id="tableBody"> </tbody>
+
+
+</table>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="employee.js"></script>
+</body>
+
+</html>

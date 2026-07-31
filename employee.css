@@ -1,0 +1,312 @@
+body {
+
+    /* Supprime les marges par défaut du navigateur */
+    margin: 0;
+
+    /* Supprime les espaces internes par défaut */
+    padding: 0;
+
+    /* Définit la police utilisée sur toute la page */
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+
+    /* Ajoute un fond avec un dégradé beige */
+    background: linear-gradient(135deg, #f5efe6, #e8dfd3);
+
+    /* Active Flexbox pour faciliter le centrage */
+    display: flex;
+
+    /* Centre le contenu horizontalement */
+    justify-content: center;
+
+    /* Centre le contenu verticalement */
+    align-items: center;
+
+    /* La hauteur minimale correspond à toute la hauteur de l'écran */
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* CARTE PRINCIPALE */
+/* ========================= */
+
+.container {
+
+    /* Couleur de fond de la carte */
+    background: #fffaf3;
+
+    /* Largeur de la carte */
+    width: 1400px;
+
+    max-width:95%;
+
+    /* Espaces internes */
+    padding: 40px;
+
+    /* Arrondit les coins */
+    border-radius: 20px;
+
+    /* Ombre sous la carte */
+    box-shadow: 0 10px 30px rgba(94, 67, 45, 0.15);
+
+    /* Centre le texte à l'intérieur */
+    text-align: center;
+
+    /* Bordure beige légère */
+    border: 1px solid #e6d7c3;
+}
+
+/* ========================= */
+/* TITRE PRINCIPAL */
+/* ========================= */
+
+h1 {
+
+    /* Couleur du titre */
+    color: #5e432d;
+
+    /* Espace sous le titre */
+    margin-bottom: 5px;
+
+    /* Taille du texte */
+    font-size: 32px;
+
+    /* Espace entre les lettres */
+    letter-spacing: 1px;
+}
+
+/* ========================= */
+/* PARAGRAPHES */
+/* ========================= */
+
+p {
+
+    /* Couleur du texte */
+    color: #8b735e;
+
+    /* Espace sous le paragraphe */
+    margin-bottom: 5px;
+
+    /* Taille du texte */
+    font-size: 14px;
+
+    /* Espace entre les lettres */
+    letter-spacing: 1px;
+}
+
+/* ========================= */
+/* TABLEAU */
+/* ========================= */
+
+table {
+
+    /* Le tableau prend toute la largeur disponible */
+    width: 100%;
+
+    /* Fusionne les bordures des cellules */
+    border-collapse: collapse;
+
+    /* Espace au-dessus du tableau */
+    margin-top: 20px;
+
+    /* Couleur de fond */
+    background: #fffaf3;
+}
+
+/* ========================= */
+/* EN-TÊTES DU TABLEAU */
+/* ========================= */
+
+th {
+
+    /* Couleur de fond des titres de colonnes */
+    background: #5e432d;
+
+    /* Couleur du texte */
+    color: rgb(236, 228, 218);
+
+    /* Espaces internes */
+    padding: 14px;
+
+    /* Aligne le texte à gauche */
+    text-align: left;
+}
+
+/* ========================= */
+/* BOUTON STATUT : EN ATTENTE */
+/* ========================= */
+
+.attente {
+
+    /* Fond rouge */
+    background-color: red;
+
+    /* Texte blanc */
+    color: #fffaf3;
+
+    /* Taille du texte */
+    font-size: 15px;
+
+    /* Coins arrondis */
+    border-radius: 35%;
+
+    /* Bordure du bouton */
+    border: 1px;
+}
+
+/* ========================= */
+/* BOUTON STATUT : FINI */
+/* ========================= */
+
+.fini {
+
+    /* Fond beige clair */
+    background-color: #fffaf3;
+
+    /* Texte vert */
+    color: green;
+
+    /* Taille du texte */
+    font-size: 15px;
+
+    /* Bordure du bouton */
+    border: 1px;
+}
+
+/* ========================= */
+/* SWITCH */
+/* ========================= */
+
+.switch {
+
+    /* Permet de positionner les éléments internes */
+    position: relative;
+
+    /* Affichage en bloc alignable */
+    display: inline-block;
+
+    /* Largeur du switch */
+    width: 60px;
+
+    /* Hauteur du switch */
+    height: 30px;
+}
+
+/* ========================= */
+/* INPUT CACHÉ */
+/* ========================= */
+
+.switch input {
+
+    /* Rend l'input invisible */
+    opacity: 0;
+
+    /* Largeur nulle */
+    width: 0;
+
+    /* Hauteur nulle */
+    height: 0;
+}
+
+/* ========================= */
+/* PARTIE VISUELLE DU SWITCH */
+/* ========================= */
+
+.slider {
+
+    /* Position absolue dans le conteneur */
+    position: absolute;
+
+    /* Curseur main au survol */
+    cursor: pointer;
+
+    /* Occupe tout l'espace du parent */
+    inset: 0;
+
+    /* Couleur rouge par défaut */
+    background-color: #dc3545;
+
+    /* Animation fluide */
+    transition: .4s;
+
+    /* Bords arrondis */
+    border-radius: 30px;
+}
+
+/* ========================= */
+/* BOUTON ROND DU SWITCH */
+/* ========================= */
+
+.slider:before {
+
+    /* Position absolue dans le slider */
+    position: absolute;
+
+    /* Élément vide généré en CSS */
+    content: "";
+
+    /* Hauteur du cercle */
+    height: 22px;
+
+    /* Largeur du cercle */
+    width: 22px;
+
+    /* Distance depuis la gauche */
+    left: 4px;
+
+    /* Distance depuis le bas */
+    bottom: 4px;
+
+    /* Couleur du cercle */
+    background-color: white;
+
+    /* Animation fluide */
+    transition: .4s;
+
+    /* Rend l'élément parfaitement rond */
+    border-radius: 50%;
+}
+
+/* ========================= */
+/* SWITCH ACTIVÉ */
+/* ========================= */
+
+input:checked + .slider {
+
+    /* Devient vert lorsque coché */
+    background-color: #28a745;
+}
+
+/* ========================= */
+/* DÉPLACEMENT DU CERCLE */
+/* ========================= */
+
+input:checked + .slider:before {
+
+    /* Déplace le cercle vers la droite */
+    transform: translateX(30px);
+}
+
+/* visuel des bouttons */
+.tabs{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:20px 0;
+}
+
+.tabs button{
+
+    background:#5e432d;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.tabs button:hover{
+
+    opacity:0.9;
+}
